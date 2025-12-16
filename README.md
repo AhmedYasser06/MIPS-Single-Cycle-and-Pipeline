@@ -157,7 +157,7 @@ This repository contains two implementations of the **MIPS (Microprocessor witho
 * **Target Use:** Academic projects, learning CPU design
 
 ---
-## 📘 Notes
+## Notes
 * This project is intended for **educational use**
 * Designs closely follow the classic **MIPS architecture**
 * Easily extendable for additional instructions or features
