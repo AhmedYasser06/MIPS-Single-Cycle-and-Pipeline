@@ -2,25 +2,35 @@
 
 A comprehensive implementation of **MIPS processors** featuring both **single-cycle** and **5-stage pipelined architectures**, designed using **Verilog HDL** for educational and academic purposes.
 
----
+
 
 ## 📌 Overview
 
 This repository contains two implementations of the **MIPS (Microprocessor without Interlocked Pipelined Stages)** architecture:
 
-* **Single-Cycle Processor**
+##  **Single-Cycle Processor**
   * Each instruction completes in one clock cycle
   * Simple and clear datapath
   * Ideal for understanding basic CPU design
+ 
+  ## Single-Cycle MIPS Datapath
 
-* **Pipelined Processor**
+![Single-Cycle MIPS Datapath](images/fig_single_cycle_datapath.png)
+
+
+##  **Pipelined Processor**
   * Implements a classic **5-stage MIPS pipeline**
   * Includes hazard detection and forwarding
   * Demonstrates performance improvement over single-cycle design
 
----
 
-## ✨ Features
+## Pipelined MIPS Datapath
+
+![Pipelined MIPS Datapath](images/Pipeline.png)
+
+
+
+##  Features
 
 ### 🔹 Single-Cycle Processor
 * Complete datapath implementation
@@ -32,7 +42,7 @@ This repository contains two implementations of the **MIPS (Microprocessor witho
 * Simple, readable, and educational design
 * One instruction executed per clock cycle
 
----
+
 
 ### 🔹 Pipelined Processor
 * Classic **5-stage pipeline**:
@@ -57,7 +67,7 @@ This repository contains two implementations of the **MIPS (Microprocessor witho
 
 ---
 
-## 🧠 Supported Instructions
+## Supported Instructions
 
 ### R-Type Instructions
 * add
