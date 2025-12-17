@@ -1,6 +1,5 @@
 -- ============================================================================
 -- MIPS Single-Cycle Processor - TOP LEVEL
--- Professional Implementation with Enhanced Debugging
 -- ============================================================================
 
 library ieee;
