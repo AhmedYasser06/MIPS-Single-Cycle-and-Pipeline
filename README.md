@@ -78,8 +78,6 @@ This repository contains two implementations of the **MIPS (Microprocessor witho
 * nor
 * slt (set less than)
 * sll (shift left logical)
-* srl (shift right logical)
-* sra (shift right arithmetic)
 * jr (jump register)
 
 ---
@@ -92,15 +90,11 @@ This repository contains two implementations of the **MIPS (Microprocessor witho
 * lw (load word)
 * sw (store word)
 * beq (branch if equal)
-* bne (branch if not equal)
-* slti (set less than immediate)
-* lui (load upper immediate)
 
 ---
 
 ### J-Type Instructions
 * j (jump)
-* jal (jump and link)
 
 ---
 
