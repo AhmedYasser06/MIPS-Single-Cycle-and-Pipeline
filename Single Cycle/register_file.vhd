@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity RegFile is
     port (	
         clk       : in  std_logic;
-        reset     : in  std_logic;
+        reset     : in  std_logic;	   -- used to Hold CPU working state , not needed for memory file
         reg_write : in  std_logic;
         wr_addr   : in  std_logic_vector(4 downto 0);
         wr_data   : in  std_logic_vector(31 downto 0);
@@ -34,7 +34,7 @@ begin
                 reg_array <= (others => (others => '0'));
                 
             elsif reg_write = '1' then
-                if wr_addr /= "00000" then       -- $zero is read-only
+                if wr_addr /= "00000" then       -- Only write if the destination register is NOT $zero.
                     reg_array(to_integer(unsigned(wr_addr))) <= wr_data;
                 end if;
             end if;
