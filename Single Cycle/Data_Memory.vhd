@@ -27,7 +27,7 @@ begin
     begin
         if rising_edge(clk) then
             if mem_write = '1' then
-                byte_addr := to_integer(unsigned(addr_in));
+                byte_addr := to_integer(unsigned(addr_in(7 downto 0)));
                 data_mem(byte_addr)     <= write_data(31 downto 24);
                 data_mem(byte_addr + 1) <= write_data(23 downto 16);
                 data_mem(byte_addr + 2) <= write_data(15 downto 8);
@@ -37,11 +37,11 @@ begin
     end process;
 
     -- ================= Read Operation (Combinational) =================
-    read_data <= data_mem(to_integer(unsigned(addr_in)))     &
-                 data_mem(to_integer(unsigned(addr_in)) + 1) &
-                 data_mem(to_integer(unsigned(addr_in)) + 2) &
-                 data_mem(to_integer(unsigned(addr_in)) + 3)
-                 when mem_read = '1'
-                 else (others => '0');
+    read_data <= data_mem(to_integer(unsigned(addr_in(7 downto 0))))     &
+             data_mem(to_integer(unsigned(addr_in(7 downto 0))) + 1) &
+             data_mem(to_integer(unsigned(addr_in(7 downto 0))) + 2) &
+             data_mem(to_integer(unsigned(addr_in(7 downto 0))) + 3)
+             when mem_read = '1'
+             else (others => '0');
 
 end architecture RTL;
