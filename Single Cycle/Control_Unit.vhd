@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity Control is
+entity MainControl is
     port ( 
         Opcode   : in  std_logic_vector(5 downto 0);
 
@@ -18,7 +18,7 @@ entity Control is
     );
 end entity;
 
-architecture RTL of Control is
+architecture RTL of MainControl is
 begin
 
     process(Opcode)
