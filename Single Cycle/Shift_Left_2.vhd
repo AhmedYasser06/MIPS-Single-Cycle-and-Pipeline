@@ -2,9 +2,6 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
--- Shift Left 2 unit
--- Multiplies the input by 4 (used for branch address calculation)
-
 entity ShiftLeft2 is
     port(
         addr_in  : in  std_logic_vector(31 downto 0);
