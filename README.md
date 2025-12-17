@@ -26,7 +26,7 @@ This repository contains two implementations of the **MIPS (Microprocessor witho
 
 ## Pipelined MIPS Datapath
 
-![Pipelined MIPS Datapath](images/Pipeline.png)
+![Pipelined MIPS Datapath](images/Pipeline_MIPS.png)
 
 
 
