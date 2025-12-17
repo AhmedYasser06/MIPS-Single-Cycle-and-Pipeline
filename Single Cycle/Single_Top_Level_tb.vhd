@@ -19,7 +19,7 @@ architecture sim of TestBench is
   
 begin
 
-  UUT: Top_Level  
+  UUT: Top_Level  	  -- Unit Under Test 
     port map (
       clk   => clk,
       reset => reset
