@@ -14,7 +14,7 @@ architecture RTL of InstrMem is
     -- 256 x 32-bit Instruction Memory
     type mem_array is array (0 to 255) of std_logic_vector(31 downto 0);
 
-    constant instr_mem : mem_array := (
+    constant instr_mem : mem_array := (					-- t1 is register 9
 
         -- ========== Initialization ==========
         0  => x"200A0007",  -- addi $t2, $zero, 7
@@ -31,12 +31,12 @@ architecture RTL of InstrMem is
         7  => x"AD2C0004",  -- sw   $t4, 4($t1)
         8  => x"8D2D0004",  -- lw   $t5, 4($t1)
 
-        -- ========== Branch (TAKEN) ==========
-        9  => x"114B0001",  -- beq  $t2, $t3, +1 (NOT taken)
+        -- ========== Branch ==========
+        9  => x"114B0001",  -- beq  $t2, $t3, +1 (NOT taken)	    BranchTarget = PC + 4 + (imm << 2)
         10 => x"200E0001",  -- addi $t6, $zero, 1
 
         -- ========== Jump ==========
-        11 => x"0800000F",  -- j    to instruction 15
+        11 => x"0800000F",  -- j    to instruction 15			   JumpTarget = { PC+4[31:28], address << 2 }  15 << 2   => 3c
 
         12 => x"200F0002",  -- addi $t7, $zero, 2 (skipped)
         13 => x"20100003",  -- addi $s0, $zero, 3 (skipped)
