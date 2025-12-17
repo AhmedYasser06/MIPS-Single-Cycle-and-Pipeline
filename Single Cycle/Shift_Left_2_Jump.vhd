@@ -1,9 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
--- Shift Left 2 unit for Jump address
--- Multiplies the 26-bit instruction field by 4
-
 entity JumpShiftLeft2 is
     port(
         jump_instr : in  std_logic_vector(25 downto 0);  -- instruction[25:0]
